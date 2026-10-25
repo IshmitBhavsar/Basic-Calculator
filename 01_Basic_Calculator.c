@@ -239,11 +239,11 @@ static void save_records(void)
         puts("Cannot open data file.");
         return;
     }
-    fprintf(file, "%d %d\n", count, next_id);
+    printf(file, "%d %d\n", count, next_id);
     for (i = 0; i < count; ++i)
     {
         Record *r = &records[i];
-        fprintf(file, "%d\n%s\n%s\n%.17g %.17g %.17g %d\n",
+        printf(file, "%d\n%s\n%s\n%.17g %.17g %.17g %d\n",
                 r->id, r->expression, r->category,
                 r->operand_a, r->operand_b, r->answer, r->state);
     }
