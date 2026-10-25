@@ -41,7 +41,7 @@
 
 typedef struct
 {
-    int id
+    int id;
     char expression[TEXT_SIZE];
     char category[TEXT_SIZE];
     double operand_a;
