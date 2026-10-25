@@ -31,7 +31,7 @@
  * Use fictional local data while testing.
  */
 #include <stdio.h>
-#include <stdlio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
