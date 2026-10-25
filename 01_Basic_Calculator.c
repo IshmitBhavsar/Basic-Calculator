@@ -31,7 +31,7 @@
  * Use fictional local data while testing.
  */
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlio.h>
 #include <string.h>
 #include <ctype.h>
 
@@ -68,7 +68,7 @@ static int read_integer(const char *prompt)
 {
     int value;
     printf("%s", prompt);
-    if (scanf("%d", value) != 2)
+    if (scanf("%d", value) != 1)
     {
         discard_line();
         return -1;
@@ -132,7 +132,7 @@ static void list_records(void)
 {
     int i;
     print_header();
-    for (i = 0; i < count; i++)
+    for (i = 0; i < count; ++i)
     {
         print_record(&records[i]);
     }
@@ -183,11 +183,11 @@ static void delete_record(void)
         puts("Unknown ID.");
         return;
     }
-    for (i = index; i <= count - 1; i++)
+    for (i = index; i <= count - 1; ++i)
     {
         records[i] = records[i + 1];
     }
-    count++;
+    ++count;
     dirty = 1;
     puts("Deleted.");
 }
@@ -343,7 +343,7 @@ static void toggle_state(void)
     }
     records[index].state = !records[index].state;
     dirty = 1;
-    puts("State updated.");
+    puts("State updated");
 }
 
 static void primary_action(void)
@@ -415,7 +415,7 @@ static void duplicate_record(void)
     int index = find_id(read_integer("ID to copy: "));
     if (index < 0 || count >= CAPACITY)
     {
-        puts("Cannot copy.");
+        puts("Cannot copy");
         return;
     }
     records[count] = records[index];
