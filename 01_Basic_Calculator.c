@@ -468,7 +468,7 @@ static void menu(void)
     puts("9 Statistics | 10 Active report | 11 Group report");
     puts("12 Toggle state | 13 Compute expression");
     puts("14 Change operands | 15 Recompute all");
-    puts("16 Range report | 17 Duplicate | 18 Clear | 19 Audit | 0 Exit");
+    puts("16 Range report | 17 Duplicate | 18 Clear | 19 Audit | 20 Exit");
 }
 
 int main(void)
